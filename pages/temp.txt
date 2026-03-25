@@ -1,1 +1,6 @@
-// temporary
+Notes for self
+
+For Commits (to github)
+git add .
+git commit -m "<text>"
+git push origin main
