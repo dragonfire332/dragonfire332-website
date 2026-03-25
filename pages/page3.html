@@ -17,9 +17,12 @@
             >Discord</a
         >
         <form action="/submit-page" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" />
+            <label for="password">Enter password:</label>
+            <input type="text" id="password" name="password" />
             <input type="submit" value="Submit" />
+            {% if password == 17 %}
+            <a href="page4(locked).html">Home</a>
+            {% endif %}
         </form>
 
         <a href="../index.html">Home</a>
