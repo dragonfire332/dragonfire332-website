@@ -1,8 +1,22 @@
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a; /* dark blue */
+    background: linear-gradient(-45deg, #0f172a, #f97316, #0f172a, #f97316);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: white;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Navbar */
