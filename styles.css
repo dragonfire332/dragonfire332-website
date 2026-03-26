@@ -96,3 +96,8 @@ iframe {
     margin-top: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+
+.spacer {
+    height: 50px; /* vertical space */
+    width: 100%; /* full width */
+}
