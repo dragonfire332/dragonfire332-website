@@ -1,28 +1,52 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <title>Softbear Games WIKI</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Connect CSS -->
+        <link rel="stylesheet" href="../styles.css" />
     </head>
+
     <body>
-        <p style="font-size: 30px">Test One</p>
-        <p>This is a body paragraph</p>
+        <!-- Navbar -->
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="page1.html">Page 1</a>
+            <a href="page2.html">Page 2</a>
+        </nav>
 
-        <a
-            href="https://www.discord.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Discord</a
-        >
-        <form id="passwordForm">
-            <label for="password">Enter password:</label>
-            <input type="text" id="password" name="password" />
-            <input type="submit" value="Submit" />
-        </form>
+        <!-- Main content -->
+        <div class="container">
+            <h1>Softbear Games WIKI</h1>
+            <p>This is a body paragraph</p>
 
+            <a
+                class="button"
+                href="https://www.discord.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Join Discord
+            </a>
+
+            <div style="margin-top: 30px">
+                <form id="passwordForm">
+                    <label for="password">Enter password:</label><br /><br />
+                    <input type="text" id="password" name="password" />
+                    <br /><br />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 20px; color: #94a3b8">
+            © 2026 DragonFire332
+        </footer>
+
+        <!-- JS at bottom -->
         <script src="../js/scripts.js"></script>
-
-        <a href="../index.html">Home</a>
     </body>
 </html>
