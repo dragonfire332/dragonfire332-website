@@ -1,0 +1,142 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif, 'Righteous';
+}
+
+.page_layout1 {
+    display: grid;
+    grid-template-columns: 100px 3fr 3fr 3fr 3fr;
+    grid-template-rows: 75px 1fr 1fr 1fr 30px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    grid-template-areas: 
+        "header header header header header"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "footer footer footer footer footer"
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    grid-area: header;
+    border-bottom: 5px solid #369998;
+    background-color: #033e4b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+    font-family: 'Righteous', cursive;
+}
+
+.navbar {
+    padding-top: 5px;
+    grid-area: sidebar;
+    background-color: #033434;
+    border-right: 5px solid #369998;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_broncos {
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/Broncos_Country.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    grid-area: main;
+    background-color: #033e4b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    border-top: 5px solid #369998;
+    background-color: #01232a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #369998;
+}
+
+.content_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 500px 1fr 1fr;
+    grid-template-rows: 150px 100px 1fr 1fr;
+    grid-template-areas: 
+        "box1 box1 box1 box1 box1"
+        "youtube youtube youtube youtube youtube"
+        "box2 box2 box2 box2 box2"
+        "box3 box3 box3 box3 box3";
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.content_box1 {
+    grid-area: box1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.content_youtube {
+    grid-area: youtube;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.content_box2 {
+    grid-area: box2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.content_box3 {
+    grid-area: box3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
