@@ -3,26 +3,34 @@ a {
     text-decoration: none;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+* {
     box-sizing: border-box;
-    font-family: Arial, sans-serif, 'Righteous';
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .page_layout1 {
     display: grid;
-    grid-template-columns: 100px 3fr 3fr 3fr 3fr;
-    grid-template-rows: 75px 1fr 1fr 1fr 30px;
-    width: 100vw;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 75px 1fr 30px;
+    width: 100%;
     height: 100vh;
     margin: 0;
     grid-template-areas: 
-        "header header header header header"
-        "sidebar main main main main"
-        "sidebar main main main main"
-        "sidebar main main main main"
-        "footer footer footer footer footer"
+        "header header"
+        "sidebar main"
+        "footer footer"
 }
 
 .box {
@@ -119,6 +127,10 @@ body {
 }
 
 .content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 0;
     grid-area: main;
     background: linear-gradient(90deg, #bd3c08, #c44e1c, #bd3c08);
 
@@ -141,7 +153,7 @@ body {
 
 .content_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 250px 200px 1fr;
     grid-template-areas: 
         "box1 box1 box1 box1"
@@ -149,6 +161,8 @@ body {
         "user1 user2 user3 user4";
     gap: 10px;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: 100%;
 }
 
@@ -162,6 +176,8 @@ body {
     padding-right: 20px;
     font-size: 20px;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .content_box2 {
@@ -173,6 +189,8 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .text_header {
@@ -240,4 +258,89 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media (width < 800px) {
+
+    .page_layout1 {
+        grid-template-columns: 55px minmax(0, 1fr);
+        grid-template-rows: 65px minmax(0, 1fr) 30px;
+    }
+
+    /* Sidebar */
+
+    .navbar_youtube,
+    .navbar_spotify,
+    .navbar_instagram,
+    .navbar_x,
+    .navbar_tiktok,
+    .navbar_discord {
+        width: 50px;
+        height: 50px;
+        background-size: 40px;
+    }
+
+    .navbar_discord {
+        background-size: 50px;
+    }
+
+    /* Header */
+
+    .page_title {
+        grid-template-columns: 5px 55px minmax(0, 1fr) 5px;
+    }
+
+    .broncos {
+        width: 55px;
+        height: 55px;
+    }
+
+    .page_title_text {
+        font-size: 20px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 18px;
+    }
+
+    /* Main content */
+
+    .content_grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows:
+            180px
+            100px
+            150px
+            150px;
+
+        grid-template-areas:
+            "box1 box1"
+            "box2 box2"
+            "user1 user2"
+            "user3 user4";
+
+        gap: 5px;
+    }
+
+    .content_box1 {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .text_header {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
+
+* {
+    outline: 1px solid red;
 }
