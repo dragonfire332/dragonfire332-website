@@ -89,7 +89,7 @@ body {
 .content_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 500px 1fr 1fr;
-    grid-template-rows: 150px 100px 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
         "box1 box1 box1 box1 box1"
         "youtube youtube youtube youtube youtube"
@@ -97,6 +97,8 @@ body {
     gap: 10px;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .content_box1 {
@@ -138,4 +140,88 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
+}
+
+@media (width < 800px) {
+    .page_layout1 {
+        grid-template-columns: 55px minmax(0, 1fr);
+        grid-template-rows: 65px minmax(0, 1fr) 50px;
+    }
+
+    .navbar_broncos {
+        width: 50px;
+        height: 50px;
+        background-size: 40px;
+    }
+
+    .content_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "box1 box1 box1 box1 box1"
+        "youtube youtube youtube youtube youtube"
+        "box2 box2 box2 box2 box2";
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    }
+
+    .header {
+    grid-area: header;
+    border-bottom: 5px solid #369998;
+    background: linear-gradient(to bottom, #03353d, #022c37);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+    }
+
+    .footer {
+    grid-area: footer;
+    border-top: 5px solid #369998;
+    background: linear-gradient(to bottom, #03353d, #022c37);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #369998;
+    font-size: 12px;
+    }
+
+    .content_box1 {
+    grid-area: box1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    }
+
+    .content_youtube {
+    grid-area: youtube;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    }
+
+    .content_box2 {
+    grid-area: box2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    }
+
 }
